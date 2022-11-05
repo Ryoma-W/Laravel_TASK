@@ -12,11 +12,11 @@
   <div class="container">
     <h2 class="page-header">新しく投稿する</h2>
     {!! Form::open(['url'=>'/index'])!!}
-    <div class="form-group">
-      {!! Form::input('text', 'newPost', null, ['required', 'class' => 'form-control', 'placeholder' => '投稿内容']) !!}
-    </div>
-    <button type="submit" class="btn btn-success pull-right">追加</button>
-    {!! Form::close() !!}
+     <div class="form-group">
+       {!! Form::input('text', 'newPost', null, ['required', 'class' => 'form-control', 'placeholder' => '投稿内容']) !!}
+     </div>
+     <button type="submit" class="btn btn-success pull-right">追加</button>
+     {!! Form::close() !!}
   </div>
   <footer>
     <small>Laravel@webcreate.task</small>

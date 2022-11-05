@@ -38,4 +38,12 @@ class PostsController extends Controller
         DB::table('posts')->where('id', $id)->delete();
         return redirect('/index');
     }
+
+    public function search(Request $request) {
+        $key = $request->key;
+        if(!empty($key)) {
+            DB::table('posts')->where('post', 'like', '%' . $key . '%');
+        }
+        return redirect('/index');
+    }
 }

@@ -10,9 +10,15 @@
   <header>
     <h1>サーバーサイド課題作成</h1>
   </header>
-  <div class="container">
+  <class="container">
     <p class="pull-right"><a class="btn btn-success" href="/create-form">投稿する</a></p>
     <h2 class="page-header">投稿一覧</h2>
+    {!! Form::open(['url'=>'/index'])!!}
+    <div class="form-group">
+      {!! Form::input('text', 'key', null, ['required', 'class' => 'form-control', 'placeholder' => 'キーワードを入力']) !!}
+    </div>
+    <button type="submit" class="btn btn-success pull-right">検索</button>
+    {!! Form::close() !!}
     <table class="table table-hover">
       <tr>
         <th>投稿No</th>
